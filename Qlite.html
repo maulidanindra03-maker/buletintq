@@ -1,0 +1,237 @@
+<!DOCTYPE html> <!-- Dokumen HTML5 -->
+<html lang="id"> <!-- Pembuka halaman, bahasa Indonesia -->
+<head> <!-- Info halaman (tidak tampil) -->
+  <meta charset="UTF-8"> <!-- Karakter UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Wajib agar responsive di HP -->
+  <title>Q-LITE - Qur'an Literasi</title> <!-- Judul tab browser -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"> <!-- Font Lora (judul) dan DM Sans (teks) -->
+  <link rel="stylesheet" href="Gaya.css"> <!-- Hubungkan ke CSS -->
+</head> <!-- Tutup head -->
+<body> <!-- Isi halaman -->
+
+  <header class="container navbar"> <!-- NAVBAR -->
+    <a href="#" class="logo"> <!-- Logo -->
+      <b>Q-LITE</b> <!-- Nama merek -->
+      <small>QUR'AN LITERASI</small> <!-- Keterangan merek -->
+    </a> <!-- Tutup logo -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle"> <!-- Saklar menu HP, tanpa JavaScript -->
+    <label for="menu-toggle" class="hamburger"> <!-- Tombol hamburger (hanya di HP) -->
+      <span></span> <!-- Garis 1 -->
+      <span></span> <!-- Garis 2 -->
+      <span></span> <!-- Garis 3 -->
+    </label> <!-- Tutup hamburger -->
+    <div class="nav-menu"> <!-- Pembungkus menu -->
+      <ul class="nav-links"> <!-- Daftar menu -->
+        <li><a href="#" class="active">Beranda</a></li> <!-- Menu aktif (tebal) -->
+        <li><a href="#artikel">Artikel</a></li> <!-- Menu Artikel -->
+        <li><a href="#edisi">Edisi majalah</a></li> <!-- Menu Edisi majalah -->
+        <li><a href="#tentang">Tentang kami</a></li> <!-- Menu Tentang kami -->
+      </ul> <!-- Tutup daftar menu -->
+      <a href="#langganan" class="btn">Berlangganan ↗</a> <!-- Tombol hijau tua -->
+    </div> <!-- Tutup pembungkus menu -->
+  </header> <!-- Tutup navbar -->
+
+  <section class="container hero"> <!-- HERO: teks kiri, foto kanan -->
+    <div class="hero-text"> <!-- Kolom teks -->
+      <p class="eyebrow">RUANG BACA, RUANG BERTUMBUH</p> <!-- Label kecil -->
+      <h1>Membaca ayat, merawat makna.</h1> <!-- Judul besar -->
+      <p class="lead">Jeda sejenak dari riuh dunia. Temukan perspektif, inspirasi, dan cerita yang mendekatkan Al-Qur'an dengan keseharian kita.</p> <!-- Pengantar -->
+      <div class="btns"> <!-- Baris tombol -->
+        <a href="#artikel" class="btn">Mulai membaca ↗</a> <!-- Tombol utama -->
+        <a href="#edisi" class="btn outline">Jelajahi edisi</a> <!-- Tombol garis tepi -->
+      </div> <!-- Tutup baris tombol -->
+      <div class="note"> <!-- Catatan redaksi -->
+        <p class="eyebrow">01 / CATATAN REDAKSI</p> <!-- Label catatan -->
+        <blockquote>Bukan sekadar selesai membaca. Tetapi, apa yang tumbuh setelahnya?</blockquote> <!-- Kutipan miring -->
+        <small>Sebuah ikhtiar kecil untuk literasi yang bermakna.</small> <!-- Keterangan -->
+      </div> <!-- Tutup catatan -->
+    </div> <!-- Tutup kolom teks -->
+    <figure class="hero-media"> <!-- Kolom foto -->
+      <div class="photo"> <!-- Pembungkus foto -->
+        <img src="download (9).jpg"Lorong lengkung masjid> <!-- Foto utama -->
+        <span class="chip">EDISI 01 / MENEMUKAN JEDA</span> <!-- Label di atas foto -->
+      </div> <!-- Tutup pembungkus foto -->
+      <figcaption class="navbar">Ada makna dalam setiap jeda.</figcaption> <!-- Bilah hijau di bawah foto -->
+      <div class="credit"> <!-- Baris keterangan kecil -->
+        <small>Q-LITE JOURNAL</small> <!-- Keterangan kiri -->
+        <small>BACA PELAN. RESAPI DALAM.</small> <!-- Keterangan kanan -->
+      </div> <!-- Tutup baris keterangan -->
+    </figure> <!-- Tutup kolom foto -->
+  </section> <!-- Tutup hero -->
+
+  <section class="band"> <!-- PITA HIJAU: 3 nilai -->
+    <ul class="container band-list"> <!-- Daftar nilai -->
+      <li>✦ Berakar pada Al-Qur'an</li> <!-- Nilai 1 -->
+      <li>✦ Dekat dengan keseharian</li> <!-- Nilai 2 -->
+      <li>✦ Terbuka untuk bertumbuh</li> <!-- Nilai 3 -->
+    </ul> <!-- Tutup daftar nilai -->
+  </section> <!-- Tutup pita -->
+
+  <section class="container section" id="artikel"> <!-- PILIHAN REDAKSI -->
+    <div class="head"> <!-- Baris judul -->
+      <div> <!-- Pembungkus judul -->
+        <p class="eyebrow">PILIHAN REDAKSI</p> <!-- Label kecil -->
+        <h2>Bacaan untuk perjalananmu.</h2> <!-- Judul section -->
+      </div> <!-- Tutup pembungkus judul -->
+      <a href="#" class="more">Semua artikel ↗</a> <!-- Tautan semua artikel -->
+    </div> <!-- Tutup baris judul -->
+    <div class="grid3"> <!-- Grid 3 artikel -->
+      <article class="post"> <!-- Artikel 1 -->
+        <img src="referensi.jpg" alt="Tadabur"> <!-- Foto artikel -->
+        <small class="tag">TADABUR</small> <!-- Kategori -->
+        <h3>Seni melambat di tengah dunia yang serba cepat</h3> <!-- Judul artikel -->
+        <p>Menemukan ketenangan melalui refleksi atas waktu dan kehidupan.</p> <!-- Ringkasan -->
+        <small class="meta">Redaksi Q-LITE · 6 menit baca</small> <!-- Penulis dan durasi -->
+      </article> <!-- Tutup artikel 1 -->
+      <article class="post"> <!-- Artikel 2 (struktur sama) -->
+        <img src="2referensi.jpg" alt="Perpustakaan"> <!-- Foto artikel -->
+        <small class="tag">LITERASI</small> <!-- Kategori -->
+        <h3>Membaca bukan sekadar merangkai kata</h3> <!-- Judul artikel -->
+        <p>Tentang rasa ingin tahu, adab belajar, dan cakrawala yang terus meluas.</p> <!-- Ringkasan -->
+        <small class="meta">Redaksi Q-LITE · 5 menit baca</small> <!-- Penulis dan durasi -->
+      </article> <!-- Tutup artikel 2 -->
+      <article class="post"> <!-- Artikel 3 -->
+        <img src="refensi3.jpg" alt="Kesederhanaan"> <!-- Foto artikel -->
+        <small class="tag">KEHIDUPAN</small> <!-- Kategori -->
+        <h3>Hal-hal kecil yang harus disyukuri</h3> <!-- Judul artikel -->
+        <p>Belajar melihat nikmat yang sering terlewat dalam keseharian.</p> <!-- Ringkasan -->
+        <small class="meta">Redaksi Q-LITE · 4 menit baca</small> <!-- Penulis dan durasi -->
+      </article> <!-- Tutup artikel 3 -->
+    </div> <!-- Tutup grid artikel -->
+  </section> <!-- Tutup Pilihan Redaksi -->
+
+  <section class="edisi" id="edisi"> <!-- EDISI PERDANA: latar hijau muda -->
+    <div class="container edisi-grid"> <!-- Grid 2 kolom -->
+      <div class="edisi-media"> <!-- Kotak sampul majalah -->
+        <small class="tag-top">EDISI PERTAMA</small> <!-- Label kiri atas -->
+        <div class="cover"> <!-- Sampul (miring) -->
+          <h3>Q-LITE</h3> <!-- Judul sampul -->
+          <small>QUR'AN LITERASI / VOL. 01</small> <!-- Keterangan sampul -->
+          <img src="" alt="Foto sampul"> <!-- Foto sampul -->
+          <p>Menemukan jeda.</p> <!-- Tulisan miring sampul -->
+        </div> <!-- Tutup sampul -->
+        <span class="num">01</span> <!-- Angka edisi -->
+      </div> <!-- Tutup kotak sampul -->
+      <div class="edisi-text"> <!-- Kolom teks -->
+        <p class="eyebrow">DARI HALAMAN KE HATI</p> <!-- Label kecil -->
+        <h2>Satu edisi. Banyak ruang refleksi.</h2> <!-- Judul section -->
+        <p class="lead">Kenali Q-LITE lebih dekat lewat edisi perdana kami. Sebuah teman baca untuk menata pikiran, merawat kepekaan, dan menemukan makna.</p> <!-- Pengantar -->
+        <div class="info"> <!-- Baris info edisi -->
+          <b>VOL. 01</b> <!-- Nomor volume -->
+          <small>TADABUR · LITERASI · KESEDERHANAAN</small> <!-- Daftar rubrik -->
+        </div> <!-- Tutup baris info -->
+        <a href="#" class="btn">Baca edisi perdana ↗</a> <!-- Tombol baca -->
+        <small class="free">GRATIS UNTUK DIBACA</small> <!-- Keterangan gratis -->
+      </div> <!-- Tutup kolom teks -->
+    </div> <!-- Tutup grid -->
+  </section> <!-- Tutup Edisi Perdana -->
+
+  <section class="container section"> <!-- RUBRIK -->
+    <div class="head"> <!-- Baris judul -->
+      <h2>Temukan sudut pandangmu.</h2> <!-- Judul section -->
+      <small class="eyebrow">JELAJAHI RUBRIK</small> <!-- Label kanan -->
+    </div> <!-- Tutup baris judul -->
+    <div class="grid4"> <!-- Grid 4 rubrik -->
+      <a href="#" class="rubrik"> <!-- Rubrik 1 -->
+        <small>01</small> <!-- Nomor -->
+        <span class="arrow">↗</span> <!-- Panah kanan atas -->
+        <h3>Tadabur</h3> <!-- Nama rubrik -->
+        <p>Menyelami ayat, meresapi makna.</p> <!-- Deskripsi -->
+      </a> <!-- Tutup rubrik 1 -->
+      <a href="#" class="rubrik"> <!-- Rubrik 2 -->
+        <small>02</small> <!-- Nomor -->
+        <span class="arrow">↗</span> <!-- Panah kanan atas -->
+        <h3>Literasi</h3> <!-- Nama rubrik -->
+        <p>Membuka buku, meluaskan pikiran.</p> <!-- Deskripsi -->
+      </a> <!-- Tutup rubrik 2 -->
+      <a href="#" class="rubrik"> <!-- Rubrik 3 -->
+        <small>03</small> <!-- Nomor -->
+        <span class="arrow">↗</span> <!-- Panah kanan atas -->
+        <h3>Kehidupan</h3> <!-- Nama rubrik -->
+        <p>Merawat nilai dalam keseharian.</p> <!-- Deskripsi -->
+      </a> <!-- Tutup rubrik 3 -->
+      <a href="#" class="rubrik"> <!-- Rubrik 4 -->
+        <small>04</small> <!-- Nomor -->
+        <span class="arrow">↗</span> <!-- Panah kanan atas -->
+        <h3>Kisah &amp; inspirasi</h3> <!-- Nama rubrik -->
+        <p>Belajar dari setiap perjalanan.</p> <!-- Deskripsi -->
+      </a> <!-- Tutup rubrik 4 -->
+    </div> <!-- Tutup grid rubrik -->
+  </section> <!-- Tutup Rubrik -->
+
+  <section class="about" id="tentang"> <!-- TENTANG: latar hijau tua -->
+    <div class="container about-grid"> <!-- Grid 2 kolom -->
+      <div> <!-- Kolom kiri -->
+        <p class="eyebrow lime">TENTANG Q-LITE</p> <!-- Label kecil (hijau muda) -->
+        <h2>Literasi yang hidup, kebaikan yang tumbuh.</h2> <!-- Judul section -->
+        <p class="lead">Q-LITE adalah ruang untuk membaca, merenung, dan berbagi. Kami percaya bahwa perjumpaan dengan Al-Qur'an dapat menjadi awal dari perubahan kecil yang berarti.</p> <!-- Pengantar -->
+      </div> <!-- Tutup kolom kiri -->
+      <div class="quote"> <!-- Kolom kutipan (garis kiri) -->
+        <span class="mark">“</span> <!-- Tanda kutip besar -->
+        <blockquote>Karena setiap bacaan yang baik layak menjadi percakapan yang berarti.</blockquote> <!-- Kutipan miring -->
+        <a href="#" class="lime">Kenali cerita kami ↗</a> <!-- Tautan hijau muda -->
+      </div> <!-- Tutup kolom kutipan -->
+    </div> <!-- Tutup grid -->
+  </section> <!-- Tutup Tentang -->
+
+  <section class="news" id="langganan"> <!-- NEWSLETTER: latar hijau limau -->
+    <div class="container news-grid"> <!-- Grid 2 kolom -->
+      <div> <!-- Kolom kiri -->
+        <p class="eyebrow">SURAT KECIL UNTUKMU</p> <!-- Label kecil -->
+        <h2>Bacaan baik, langsung ke kotak masuk.</h2> <!-- Judul section -->
+        <p class="lead">Artikel pilihan, kabar edisi, dan inspirasi untuk jedamu.</p> <!-- Pengantar -->
+      </div> <!-- Tutup kolom kiri -->
+      <form class="news-form" action="#"> <!-- Form berlangganan -->
+        <div class="field"> <!-- Kotak putih -->
+          <input type="email" placeholder="Alamat email kamu"> <!-- Kolom email -->
+          <button type="submit" class="btn">Berlangganan ↗</button> <!-- Tombol kirim -->
+        </div> <!-- Tutup kotak putih -->
+        <small>Dengan berlangganan, kamu menyetujui kebijakan privasi kami. Tanpa spam. Kamu bisa berhenti kapan saja.</small> <!-- Catatan privasi -->
+      </form> <!-- Tutup form -->
+    </div> <!-- Tutup grid -->
+  </section> <!-- Tutup Newsletter -->
+
+  <footer class="container footer"> <!-- FOOTER -->
+    <div class="f-grid"> <!-- Grid kolom footer -->
+      <div> <!-- Kolom logo -->
+        <a href="#" class="logo"> <!-- Logo -->
+          <b>Q-LITE</b> <!-- Nama merek -->
+          <small>QUR'AN LITERASI</small> <!-- Keterangan merek -->
+        </a> <!-- Tutup logo -->
+        <p>Membaca ayat, merawat makna.</p> <!-- Tagline -->
+      </div> <!-- Tutup kolom logo -->
+      <div> <!-- Kolom Jelajahi -->
+        <h4>JELAJAHI</h4> <!-- Judul kolom -->
+        <ul> <!-- Daftar -->
+          <li>Artikel</li> <!-- Item 1 -->
+          <li>Edisi majalah</li> <!-- Item 2 -->
+          <li>Rubrik pilihan</li> <!-- Item 3 -->
+        </ul> <!-- Tutup daftar -->
+      </div> <!-- Tutup kolom Jelajahi -->
+      <div> <!-- Kolom Tentang -->
+        <h4>TENTANG</h4> <!-- Judul kolom -->
+        <ul> <!-- Daftar -->
+          <li>Cerita Q-LITE</li> <!-- Item 1 -->
+          <li>Kontak redaksi</li> <!-- Item 2 -->
+          <li>Panduan kontribusi</li> <!-- Item 3 -->
+        </ul> <!-- Tutup daftar -->
+      </div> <!-- Tutup kolom Tentang -->
+      <div> <!-- Kolom Terhubung -->
+        <h4>TERHUBUNG</h4> <!-- Judul kolom -->
+        <ul> <!-- Daftar -->
+          <li>Instagram ↗</li> <!-- Item 1 -->
+          <li>Email redaksi ↗</li> <!-- Item 2 -->
+        </ul> <!-- Tutup daftar -->
+      </div> <!-- Tutup kolom Terhubung -->
+    </div> <!-- Tutup grid footer -->
+    <div class="f-bottom"> <!-- Baris paling bawah -->
+      <small>© 2026 Q-LITE. Ruang untuk membaca dan bertumbuh.</small> <!-- Hak cipta -->
+      <ul class="legal"> <!-- Tautan bawah -->
+        <li>Kebijakan privasi</li> <!-- Item 1 -->
+        <li>Kembali ke atas ↑</li> <!-- Item 2 -->
+      </ul> <!-- Tutup tautan bawah -->
+    </div> <!-- Tutup baris bawah -->
+  </footer> <!-- Tutup footer -->
+
+</body> <!-- Tutup isi halaman -->
+</html> <!-- Tutup dokumen -->

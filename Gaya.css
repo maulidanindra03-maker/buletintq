@@ -1,0 +1,529 @@
+/* ===== DASAR ===== */
+:root { /* Variabel warna */
+  --white: #f7f4ed; /* Latar krem */
+  --green: #213d33; /* Hijau tua */
+  --sage: #e8eadc; /* Hijau muda keabuan */
+  --sage2: #d9dfcd; /* Hijau muda lebih gelap */
+  --lime: #d8e8a0; /* Hijau limau */
+  --muted: #66716a; /* Teks abu-abu */
+  --line: #d9d6ca; /* Warna garis tipis */
+}
+* { /* Semua elemen */
+  margin: 0; /* Hapus margin bawaan */
+  padding: 0; /* Hapus padding bawaan */
+  box-sizing: border-box; /* Padding masuk hitungan lebar */
+}
+body { /* Seluruh halaman */
+  font-family: "DM Sans", Arial, sans-serif; /* Font teks */
+  background: var(--cream); /* Latar krem */
+  color: var(--green); /* Teks hijau tua */
+  line-height: 1.6; /* Jarak antar baris */
+}
+h1, h2, h3, blockquote, .logo b { /* Semua judul */
+  font-family: "Lora", Georgia, serif; /* Font serif */
+  font-weight: 400; /* Tipis */
+}
+img { /* Semua gambar */
+  display: block; /* Hilangkan celah bawah */
+  max-width: 100%; /* Tidak melebihi layar */
+  object-fit: cover; /* Foto tidak gepeng */
+}
+a { /* Semua link */
+  color: inherit; /* Ikut warna sekitar */
+  text-decoration: none; /* Tanpa garis bawah */
+}
+ul { /* Semua daftar */
+  list-style: none; /* Tanpa bullet */
+}
+.container { /* Pembungkus isi */
+  width: min(1140px, 100% - 40px); /* Maks 1140px, sisa 20px tiap sisi */
+  margin-inline: auto; /* Rata tengah */
+}
+.section { /* Section biasa */
+  padding-block: 56px; /* Jarak atas bawah */
+}
+.eyebrow { /* Label kecil huruf besar */
+  font-size: 10px; /* Ukuran kecil */
+  font-weight: 700; /* Tebal */
+  letter-spacing: .08em; /* Renggang antar huruf */
+  margin-bottom: 12px; /* Jarak bawah */
+}
+.lime { /* Warna hijau limau */
+  color: var(--lime); /* Teks limau */
+}
+.lead { /* Paragraf pengantar */
+  color: var(--muted); /* Abu-abu */
+  font-size: 15px; /* Ukuran teks */
+  max-width: 440px; /* Batas lebar */
+}
+h2 { /* Judul section */
+  font-size: clamp(26px, 3.4vw, 36px); /* Ukuran menyesuaikan layar */
+  line-height: 1.25; /* Jarak baris */
+}
+.btn { /* Tombol hijau tua */
+  display: inline-block; /* Bisa diberi padding */
+  background: var(--green); /* Latar hijau tua */
+  color: #fff; /* Teks putih */
+  border: 1px solid var(--green); /* Garis tepi hijau */
+  padding: 14px 28px; /* Jarak dalam */
+  font: 500 13px "DM Sans", sans-serif; /* Font tombol */
+  cursor: pointer; /* Kursor tangan */
+}
+.outline { /* Tombol garis tepi */
+  background: transparent; /* Latar bening */
+  color: var(--green); /* Teks hijau */
+}
+.head { /* Baris judul + tautan kanan */
+  display: flex; /* Susun mendatar */
+  justify-content: space-between; /* Judul kiri, tautan kanan */
+  align-items: center; /* Sejajar vertikal */
+  gap: 16px; /* Jarak antar elemen */
+  margin-bottom: 32px; /* Jarak ke konten */
+}
+.more { /* Tautan Semua artikel */
+  font-size: 12px; /* Ukuran kecil */
+  font-weight: 500; /* Tebal sedang */
+}
+
+/* ===== NAVBAR ===== */
+.navbar { /* Navbar */
+  display: flex; /* Susun mendatar */
+  align-items: center; /* Sejajar vertikal */
+  justify-content: space-between; /* Logo kiri, tombol kanan */
+  padding-block: 22px; /* Jarak atas bawah */
+  border-bottom: 1px solid var(--line); /* Garis tipis bawah */
+  position: relative; /* Acuan menu HP */
+}
+.logo { /* Logo */
+  display: flex; /* Susun ke bawah */
+  flex-direction: column; /* Nama di atas keterangan */
+  line-height: 1.1; /* Rapatkan baris */
+}
+.logo b { /* Nama merek */
+  font-size: 38px; /* Ukuran besar */
+}
+.logo small { /* Keterangan merek */
+  font-size: 8px; /* Sangat kecil */
+  letter-spacing: .2em; /* Renggang antar huruf */
+}
+.nav-menu { /* Menu + tombol */
+  display: flex; /* Susun mendatar */
+  flex: 1; /* Isi sisa ruang */
+  align-items: center; /* Sejajar vertikal */
+  margin-left: 60px; /* Jarak dari logo */
+}
+.nav-links { /* Daftar menu */
+  display: flex; /* Susun mendatar */
+  gap: 56px; /* Jarak antar menu */
+  margin: 0 auto; /* Rata tengah */
+  font-size: 13px; /* Ukuran menu */
+}
+.nav-links .active { /* Menu aktif */
+  font-weight: 700; /* Tebal */
+}
+.menu-toggle, .hamburger { /* Saklar dan hamburger */
+  display: none; /* Sembunyi di desktop */
+}
+
+/* ===== HERO ===== */
+.hero { /* Pembungkus hero */
+  display: grid; /* Pakai grid */
+  grid-template-columns: 1fr 1fr; /* Teks kiri, foto kanan */
+  gap: 60px; /* Jarak antar kolom */
+  padding-block: 40px; /* Jarak atas bawah */
+}
+.hero h1 { /* Judul hero */
+  font-size: clamp(38px, 5vw, 56px); /* Ukuran menyesuaikan layar */
+  line-height: 1.15; /* Jarak baris */
+  margin-bottom: 24px; /* Jarak bawah */
+}
+.btns { /* Baris tombol */
+  display: flex; /* Berdampingan */
+  flex-wrap: wrap; /* Boleh turun baris */
+  gap: 12px; /* Jarak antar tombol */
+  margin-top: 32px; /* Jarak atas */
+}
+.note { /* Catatan redaksi */
+  border-top: 1px solid var(--line); /* Garis tipis atas */
+  margin-top: 48px; /* Jarak atas */
+  padding-top: 20px; /* Jarak dalam atas */
+}
+.note blockquote { /* Kutipan miring */
+  font-style: italic; /* Huruf miring */
+  font-size: 20px; /* Ukuran kutipan */
+  line-height: 1.4; /* Jarak baris */
+  margin-bottom: 8px; /* Jarak bawah */
+}
+.note small { /* Keterangan kecil */
+  color: var(--muted); /* Abu-abu */
+  font-size: 11px; /* Ukuran kecil */
+}
+.photo { /* Pembungkus foto hero */
+  position: relative; /* Acuan label */
+}
+.photo img { /* Foto hero */
+  width: 100%; /* Selebar kolom */
+  height: 520px; /* Tinggi foto */
+}
+.chip { /* Label di atas foto */
+  position: absolute; /* Melayang di atas foto */
+  top: 20px; /* Jarak dari atas */
+  left: 20px; /* Jarak dari kiri */
+  background: var(--cream); /* Latar krem */
+  padding: 8px 14px; /* Jarak dalam */
+  font-size: 9px; /* Ukuran kecil */
+  font-weight: 700; /* Tebal */
+}
+.cap { /* Bilah hijau di bawah foto */
+  background: var(--green); /* Latar hijau tua */
+  color: var(--cream); /* Teks krem */
+  font: italic 400 20px "Lora", serif; /* Font miring */
+  padding: 20px; /* Jarak dalam */
+}
+.credit { /* Baris keterangan kecil */
+  display: flex; /* Susun mendatar */
+  justify-content: space-between; /* Kiri dan kanan */
+  margin-top: 14px; /* Jarak atas */
+  font-size: 9px; /* Ukuran kecil */
+}
+
+/* ===== PITA HIJAU ===== */
+.band { /* Pita hijau tua */
+  background: var(--green); /* Latar hijau tua */
+  color: var(--cream); /* Teks krem */
+}
+.band-list { /* Daftar nilai */
+  display: flex; /* Susun mendatar */
+  justify-content: space-between; /* Sebar rata */
+  gap: 16px; /* Jarak antar nilai */
+  padding-block: 28px; /* Jarak atas bawah */
+  font-size: 14px; /* Ukuran teks */
+}
+
+/* ===== PILIHAN REDAKSI ===== */
+.grid3 { /* Grid 3 artikel */
+  display: grid; /* Pakai grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  gap: 32px; /* Jarak antar artikel */
+}
+.post img { /* Foto artikel */
+  width: 100%; /* Selebar kolom */
+  height: 220px; /* Tinggi foto */
+  margin-bottom: 18px; /* Jarak bawah */
+}
+.tag { /* Kategori artikel */
+  display: block; /* Baris sendiri */
+  font-size: 9px; /* Ukuran kecil */
+  font-weight: 700; /* Tebal */
+  letter-spacing: .06em; /* Renggang antar huruf */
+}
+.post h3 { /* Judul artikel */
+  font-size: 22px; /* Ukuran judul */
+  line-height: 1.3; /* Jarak baris */
+  margin: 10px 0 8px; /* Jarak atas bawah */
+}
+.post p { /* Ringkasan artikel */
+  color: var(--muted); /* Abu-abu */
+  font-size: 13px; /* Ukuran teks */
+  margin-bottom: 14px; /* Jarak bawah */
+}
+.meta { /* Penulis dan durasi */
+  color: var(--muted); /* Abu-abu */
+  font-size: 10px; /* Ukuran kecil */
+}
+
+/* ===== EDISI PERDANA ===== */
+.edisi { /* Latar hijau muda */
+  background: var(--sage); /* Warna sage */
+  padding-block: 44px; /* Jarak atas bawah */
+}
+.edisi-grid { /* Grid 2 kolom */
+  display: grid; /* Pakai grid */
+  grid-template-columns: 1fr 1fr; /* Sampul kiri, teks kanan */
+  gap: 64px; /* Jarak antar kolom */
+  align-items: center; /* Sejajar vertikal */
+}
+.edisi-media { /* Kotak sampul */
+  position: relative; /* Acuan label dan angka */
+  display: grid; /* Pakai grid */
+  place-items: center; /* Sampul di tengah */
+  background: var(--sage2); /* Latar hijau muda gelap */
+  padding: 56px 40px; /* Jarak dalam */
+}
+.tag-top { /* Label kiri atas */
+  position: absolute; /* Melayang */
+  top: 16px; /* Jarak dari atas */
+  left: 16px; /* Jarak dari kiri */
+  font-size: 8px; /* Ukuran kecil */
+  font-weight: 700; /* Tebal */
+}
+.cover { /* Sampul majalah */
+  width: 70%; /* Lebar sampul */
+  background: var(--green); /* Latar hijau tua */
+  color: #fff; /* Teks putih */
+  padding: 22px; /* Jarak dalam */
+  transform: rotate(-4deg); /* Miring sedikit */
+  box-shadow: 0 20px 40px rgba(0,0,0,.25); /* Bayangan */
+}
+.cover h3 { /* Judul sampul */
+  font-size: 40px; /* Ukuran besar */
+}
+.cover small { /* Keterangan sampul */
+  display: block; /* Baris sendiri */
+  font-size: 8px; /* Sangat kecil */
+  margin-bottom: 12px; /* Jarak bawah */
+}
+.cover img { /* Foto sampul */
+  width: 100%; /* Selebar sampul */
+  height: 170px; /* Tinggi foto */
+}
+.cover p { /* Tulisan miring sampul */
+  font: italic 400 26px "Lora", serif; /* Font miring */
+  margin-top: 12px; /* Jarak atas */
+}
+.num { /* Angka edisi */
+  position: absolute; /* Melayang */
+  right: 36px; /* Jarak dari kanan */
+  bottom: 18px; /* Jarak dari bawah */
+  font: 400 48px "Lora", serif; /* Font angka */
+}
+.edisi-text h2 { /* Judul edisi */
+  margin-bottom: 20px; /* Jarak bawah */
+}
+.info { /* Baris info edisi */
+  display: flex; /* Susun mendatar */
+  gap: 48px; /* Jarak antar info */
+  border-top: 1px solid var(--line); /* Garis atas */
+  margin: 28px 0; /* Jarak atas bawah */
+  padding-top: 20px; /* Jarak dalam atas */
+  font-size: 10px; /* Ukuran kecil */
+}
+.free { /* Keterangan gratis */
+  display: block; /* Baris sendiri */
+  margin-top: 16px; /* Jarak atas */
+  color: var(--muted); /* Abu-abu */
+  font-size: 9px; /* Ukuran kecil */
+}
+
+/* ===== RUBRIK ===== */
+.grid4 { /* Grid 4 rubrik */
+  display: grid; /* Pakai grid */
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  gap: 24px; /* Jarak antar rubrik */
+}
+.rubrik { /* Satu rubrik */
+  display: grid; /* Pakai grid */
+  grid-template-columns: 1fr auto; /* Nomor kiri, panah kanan */
+  border-top: 1px solid var(--line); /* Garis atas */
+  padding-top: 14px; /* Jarak dalam atas */
+}
+.rubrik small { /* Nomor rubrik */
+  font-size: 10px; /* Ukuran kecil */
+}
+.rubrik h3 { /* Nama rubrik */
+  grid-column: 1 / -1; /* Lebar penuh */
+  font-size: 24px; /* Ukuran judul */
+  margin: 16px 0 6px; /* Jarak atas bawah */
+}
+.rubrik p { /* Deskripsi rubrik */
+  grid-column: 1 / -1; /* Lebar penuh */
+  color: var(--muted); /* Abu-abu */
+  font-size: 12px; /* Ukuran kecil */
+}
+
+/* ===== TENTANG ===== */
+.about { /* Latar hijau tua */
+  background: var(--green); /* Warna hijau tua */
+  color: var(--cream); /* Teks krem */
+  padding-block: 64px; /* Jarak atas bawah */
+}
+.about-grid { /* Grid 2 kolom */
+  display: grid; /* Pakai grid */
+  grid-template-columns: 1.3fr 1fr; /* Teks kiri, kutipan kanan */
+  gap: 48px; /* Jarak antar kolom */
+}
+.about h2 { /* Judul tentang */
+  margin-bottom: 20px; /* Jarak bawah */
+}
+.about .lead { /* Pengantar di latar gelap */
+  color: #dfe6dc; /* Teks terang */
+}
+.quote { /* Kolom kutipan */
+  border-left: 1px solid rgba(255,255,255,.2); /* Garis kiri tipis */
+  padding-left: 40px; /* Jarak dalam kiri */
+}
+.mark { /* Tanda kutip besar */
+  font: 400 64px "Lora", serif; /* Font besar */
+  color: var(--lime); /* Warna limau */
+  line-height: 1; /* Rapatkan baris */
+}
+.quote blockquote { /* Kutipan miring */
+  font-style: italic; /* Huruf miring */
+  font-size: 22px; /* Ukuran kutipan */
+  line-height: 1.5; /* Jarak baris */
+  margin: 16px 0 24px; /* Jarak atas bawah */
+}
+.quote a { /* Tautan kutipan */
+  font-size: 12px; /* Ukuran kecil */
+}
+
+/* ===== NEWSLETTER ===== */
+.news { /* Latar hijau limau */
+  background: var(--lime); /* Warna limau */
+  padding-block: 64px; /* Jarak atas bawah */
+}
+.news-grid { /* Grid 2 kolom */
+  display: grid; /* Pakai grid */
+  grid-template-columns: 1fr 1fr; /* Teks kiri, form kanan */
+  gap: 48px; /* Jarak antar kolom */
+  align-items: center; /* Sejajar vertikal */
+}
+.news h2 { /* Judul newsletter */
+  margin-bottom: 16px; /* Jarak bawah */
+}
+.news .lead { /* Pengantar newsletter */
+  color: var(--green); /* Hijau tua */
+}
+.field { /* Kotak putih */
+  display: flex; /* Input dan tombol sejajar */
+  background: #fff; /* Latar putih */
+  padding: 4px; /* Jarak dalam */
+}
+.field input { /* Kolom email */
+  flex: 1; /* Isi sisa ruang */
+  border: 0; /* Tanpa garis tepi */
+  padding: 0 20px; /* Jarak dalam */
+  font: 13px "DM Sans", sans-serif; /* Font isian */
+  outline: none; /* Hilangkan kotak fokus */
+  min-width: 0; /* Boleh mengecil */
+}
+.news-form small { /* Catatan privasi */
+  display: block; /* Baris sendiri */
+  margin-top: 12px; /* Jarak atas */
+  font-size: 10px; /* Ukuran kecil */
+}
+
+/* ===== FOOTER ===== */
+.footer { /* Footer */
+  padding-top: 56px; /* Jarak atas */
+}
+.f-grid { /* Grid kolom footer */
+  display: grid; /* Pakai grid */
+  grid-template-columns: 2fr 1fr 1fr 1fr; /* 4 kolom */
+  gap: 32px; /* Jarak antar kolom */
+}
+.f-grid p { /* Tagline */
+  color: var(--muted); /* Abu-abu */
+  font-size: 12px; /* Ukuran kecil */
+  margin-top: 16px; /* Jarak atas */
+}
+.f-grid h4 { /* Judul kolom */
+  font-size: 9px; /* Ukuran kecil */
+  letter-spacing: .08em; /* Renggang antar huruf */
+  margin-bottom: 12px; /* Jarak bawah */
+}
+.f-grid li { /* Item daftar */
+  color: var(--muted); /* Abu-abu */
+  font-size: 12px; /* Ukuran kecil */
+  margin-bottom: 6px; /* Jarak antar item */
+}
+.f-bottom { /* Baris paling bawah */
+  display: flex; /* Susun mendatar */
+  justify-content: space-between; /* Kiri dan kanan */
+  flex-wrap: wrap; /* Boleh turun baris */
+  gap: 12px; /* Jarak antar elemen */
+  border-top: 1px solid var(--line); /* Garis atas */
+  margin-top: 48px; /* Jarak atas */
+  padding-block: 20px; /* Jarak atas bawah */
+  color: var(--muted); /* Abu-abu */
+  font-size: 10px; /* Ukuran kecil */
+}
+.legal { /* Tautan bawah */
+  display: flex; /* Berdampingan */
+  gap: 24px; /* Jarak antar tautan */
+}
+
+/* ===== RESPONSIVE TABLET (<= 992px) ===== */
+@media (max-width: 992px) { /* Aktif jika layar <= 992px */
+  .hero, .edisi-grid, .about-grid, .news-grid { /* Grid 2 kolom */
+    grid-template-columns: 1fr; /* Jadi 1 kolom */
+  }
+  .grid3 { /* Grid artikel */
+    grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom */
+  }
+  .grid4 { /* Grid rubrik */
+    grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom */
+  }
+  .f-grid { /* Footer */
+    grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom */
+  }
+  .quote { /* Kolom kutipan */
+    border-left: 0; /* Hapus garis kiri */
+    padding-left: 0; /* Hapus jarak kiri */
+  }
+}
+
+/* ===== RESPONSIVE HP (<= 600px) ===== */
+@media (max-width: 600px) { /* Aktif jika layar <= 600px */
+  .hamburger { /* Ikon hamburger */
+    display: flex; /* Tampilkan */
+    flex-direction: column; /* Garis ke bawah */
+    gap: 5px; /* Jarak antar garis */
+    cursor: pointer; /* Kursor tangan */
+  }
+  .hamburger span { /* Satu garis hamburger */
+    width: 24px; /* Panjang garis */
+    height: 2px; /* Tebal garis */
+    background: var(--green); /* Warna hijau */
+  }
+  .nav-menu { /* Menu di HP */
+    display: none; /* Sembunyi dulu */
+    position: absolute; /* Melayang di bawah navbar */
+    top: 100%; /* Tepat di bawah navbar */
+    left: 0; /* Mulai dari kiri */
+    right: 0; /* Sampai kanan */
+    z-index: 5; /* Di atas konten lain */
+    flex-direction: column; /* Susun ke bawah */
+    align-items: flex-start; /* Rata kiri */
+    gap: 16px; /* Jarak antar elemen */
+    margin-left: 0; /* Hapus jarak kiri */
+    padding: 20px; /* Jarak dalam */
+    background: var(--cream); /* Latar krem */
+    border: 1px solid var(--line); /* Garis tepi tipis */
+  }
+  .menu-toggle:checked ~ .nav-menu { /* Saat hamburger diklik */
+    display: flex; /* Tampilkan menu */
+  }
+  .nav-links { /* Daftar menu */
+    flex-direction: column; /* Susun ke bawah */
+    gap: 12px; /* Jarak antar menu */
+    margin: 0; /* Hapus rata tengah */
+  }
+  .photo img { /* Foto hero */
+    height: 340px; /* Lebih pendek */
+  }
+  .band-list { /* Daftar nilai */
+    flex-direction: column; /* Susun ke bawah */
+  }
+  .grid3, .grid4 { /* Grid artikel dan rubrik */
+    grid-template-columns: 1fr; /* Jadi 1 kolom */
+  }
+  .head { /* Baris judul */
+    flex-direction: column; /* Susun ke bawah */
+    align-items: flex-start; /* Rata kiri */
+  }
+  .info { /* Baris info edisi */
+    flex-direction: column; /* Susun ke bawah */
+    gap: 8px; /* Jarak dirapatkan */
+  }
+  .field { /* Kotak email */
+    flex-direction: column; /* Input di atas tombol */
+    gap: 4px; /* Jarak antar elemen */
+  }
+  .field input { /* Kolom email */
+    padding: 14px 16px; /* Jarak dalam */
+  }
+  .f-grid { /* Footer */
+    grid-template-columns: 1fr; /* Jadi 1 kolom */
+  }
+}
